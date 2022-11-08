@@ -41,6 +41,11 @@ const NavBar = () => {
                   Tracks
                 </Link>
               </li>
+              {/* <li className='nav-item'>
+                <Link to='/car' className='nav-link'>
+                  Car Details
+                </Link>
+              </li> */}
               <li className='nav-item'>
                 <Link to='/contact' className='nav-link'>
                   Contact Us

@@ -12,7 +12,7 @@ app.use(express.json());
 //GetTop5Drivers
 app.get("/", async(req, res) =>{
     try {
-        const getTop5Drivers = await pool.query("SELECT * FROM drivers WHERE position < 6")
+        const getTop5Drivers = await pool.query("SELECT * FROM drivers WHERE position GROUP BY position ORDER BY position")
         res.json(getTop5Drivers.rows)
     }
     catch (err) {
@@ -56,7 +56,15 @@ app.get("/teams", async(req, res) =>{
 })
 
 //GetTeamByID
-
+app.get("/teams:id", async(req, res) =>{
+    try {
+        const team = await pool.query("SELECT * FROM teams WHERE team_id = $1", [id])
+        res.json(team.rows)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+})
 
 //GetAllCircuits
 app.get("/circuits", async(req, res) =>{
@@ -70,8 +78,6 @@ app.get("/circuits", async(req, res) =>{
 })
 
 //GetCircuitByID
-
-
 app.listen(8080, () => {
     console.log("Server has Started on port 8080");
 })
@@ -86,3 +92,8 @@ app.get("/winners", async(req, res) =>{
         console.log(err.message);
     }
 })
+
+// //Show Car Detail
+// app.get("/car", async(req, res) => {
+//     <CarCard />
+// })

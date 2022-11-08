@@ -1,26 +1,33 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import DriversHomeCard from '../components/DriversHomeCard'
+import HomeCard from '../components/HomeCard'
 import DriverService from '../services/DriverService'
 import TeamsService from '../services/TeamsService'
-import TracksService from '../services/TracksService'
+// import TracksService from '../services/TracksService'
 import React from 'react';
+import TeamsCard from '../components/HomeTeamsCard';
 
 const HomeContainer = () => {
 
     const [driversList, setDriversList] = useState([])
-    // const [teamsList, setTeamsList] = useState([])
+    const [teamsList, setTeamsList] = useState([])
     // const [circuitsList, setCircuitsList] = useState([])
 
 
-  // useEffect(() => {
-  //   DriverService.getAllDrivers()
-  //   .then((allDrivers) => {
-  //     setDriversList(allDrivers)
-  //   })
-  // }, [])
+  useEffect(() => {
+    DriverService.getAllDrivers()
+    .then((allDrivers) => {
+      setDriversList(allDrivers)
+    })
+  }, [])
 
-  console.log(driversList)
+  useEffect(() => {
+    TeamsService.getAllTeams()
+    .then((allTeams) => {
+      setTeamsList(allTeams)
+    })
+  }, [])
+
 
 //   useEffect(() => {
 //     getAllTeams().then((allTeams) => {
@@ -44,9 +51,9 @@ const HomeContainer = () => {
 
       <div className='stacked-group'>
         <div className='stacked-list'>
-          <h4 className='stacked-group-title'>Drivers</h4>
+          <h4 className='stacked-group-title'>Drivers Championship</h4>
           <ul role='list' className='dash-list'>
-            <DriversHomeCard drivers={driversList} />
+            <HomeCard key={driversList.driver_id} drivers={driversList} />
           </ul>
           <Link to='/drivers' className='button primary dash'>
             Full Drivers List
@@ -54,14 +61,15 @@ const HomeContainer = () => {
         </div>
 
 
-        {/* <div className='stacked-list'>
-          <h4 className='stacked-group-title'>Teams</h4> */}
-{/* 
-          <TeamsList teams={teamsList} />
-          { <Link to='/teams' className='button primary dash'>
+        <div className='stacked-list'>
+          <h4 className='stacked-group-title'>Constructors Championship</h4>
+          <ul role='list' className='dash-list'>
+          <TeamsCard key={teamsList.team_id} listOfTeams={teamsList} />
+          </ul>
+          <Link to='/teams' className='button primary dash'>
             Full Teams List
           </Link>
-        </div> */}
+        </div>
 
 
         {/* <div className='stacked-list'>

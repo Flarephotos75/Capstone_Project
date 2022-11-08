@@ -5,8 +5,8 @@ import DriversListHomeList from "./DriversListHomeList";
 
 
 
-const DriversHomeCard = () => {
-    const [driversList, setDriversList] = useState([])
+const HomeCard = ({drivers}) => {
+    // const [driversList, setDriversList] = useState([])
 
 // useEffect(() => {
 //     DriverService.getAllDrivers()
@@ -14,11 +14,10 @@ const DriversHomeCard = () => {
 //     , [])
   return (
     <>
-      
-        <DriversListHomeList listOfDrivers={driversList} />
+        <DriversListHomeList key={drivers.driver_id} listOfDrivers={drivers} />
     
     </>
   )
 }
 
-export default DriversHomeCard;
+export default HomeCard;
