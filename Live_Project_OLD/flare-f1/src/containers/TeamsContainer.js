@@ -25,9 +25,6 @@ const TeamsContainer = () => {
       <ul role='list' className='dash-list'>
       <AllTeamsCard key={teamsList.team_id} listOfTeams={teamsList} />
       </ul>
-      <Link to='/teams' className='button primary dash'>
-        Full Teams List
-      </Link>
     </div>
 </div>
       )

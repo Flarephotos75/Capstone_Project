@@ -16,17 +16,12 @@ const DriversContainer = () => {
   }, [])
 
   return (
-    <div>
       <div className='stacked-group'>
         <div className='stacked-list'>
           <h4 className='stacked-group-title'>Drivers Information</h4><br />
           <ul role='list' className='dash-list'>
             <AllDriversCard key={driversList.driver_id} drivers={driversList} />
           </ul>
-          <Link to='/drivers' className='button primary dash'>
-            Full Drivers List
-          </Link>
-        </div>
         </div>
     </div>
   )
