@@ -6,7 +6,7 @@ import React from 'react';
 import "./static/style.css"
 import TeamsContainer from './containers/TeamsContainer';
 import DriversContainer from './containers/DriversContainer'
-import CarCard from './components/CarCard';
+import CircuitContainer from './containers/CircuitContainer'
 
 function App() {
 
@@ -39,8 +39,8 @@ function App() {
           {/* <Route path='/teams/:id/' element={<TeamDetail />} /> */}
 
            {/* CIRCUITS ROUTES */}
-           {/* <Route path='/circuit/' element={<CircuitContainer circuits={circuits} />} />
-          <Route path='/circuit/:id/' element={<CircuitDetail />} /> */}
+           <Route path='/circuits/' element={<CircuitContainer />} />
+          {/* <Route path='/circuit/:id/' element={<CircuitDetail />} /> */}
 
         </Routes>
       </Router>

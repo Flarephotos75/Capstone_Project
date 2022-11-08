@@ -15,8 +15,6 @@ getTeam(id) {
     .then((res) => res.json())
   },
 
-
-
 }
 
 export default TeamsService;

@@ -1,25 +1,19 @@
 import React from 'react'
+import Accordian from './DriverAccordian'
 
 
 const AllDriversCard     = ( {drivers} ) => {
 
+    
+
   const driverData = drivers.map((driver) => {
+        return (<>
+            <img src={"http://localhost:8080" + driver.image_path} width="144" height="144"/>
+            <li><Accordian key={driver.id} driver={driver}/></li>
+        </>
+        )
+    })
 
-    return (
-  
-
-      <>
-        <div>
-        <img src={"http://localhost:8080" + driver.image_path} width="144" height="144"/>
-         <p >Position </p>
-         <p >Driver Name</p>
-            <p> {driver.position}</p>
-            <p> {driver.driver_name}</p>
-        <hr />
-        </div>
-      </>
-    )
-  })
 
   return (
     <>
