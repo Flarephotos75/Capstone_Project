@@ -1,23 +1,22 @@
 import React from 'react'
 
 
-const DriversListHomeList = ( {drivers} ) => {
+const AllDriversCard     = ( {drivers} ) => {
 
   const driverData = drivers.map((driver) => {
-
-      
 
     return (
   
 
       <>
-        <li  className='table_layout' >
-         <th role='list'>Position</th>
-            <td> {driver.position}</td>
-         <th role='list'>Name</th>
-            <td> {driver.driver_name}</td>
-        </li>
+        <div>
+        <img src={"http://localhost:8080" + driver.image_path} width="144" height="144"/>
+         <p >Position </p>
+         <p >Driver Name</p>
+            <p> {driver.position}</p>
+            <p> {driver.driver_name}</p>
         <hr />
+        </div>
       </>
     )
   })
@@ -25,12 +24,12 @@ const DriversListHomeList = ( {drivers} ) => {
   return (
     <>
     <div className='table_layout'></div>
-      <ul role='list'>
+      <li role='list'>
         {driverData}
-      </ul>
+      </li>
     </>
   )
 
 }
 
-export default DriversListHomeList
+export default AllDriversCard;

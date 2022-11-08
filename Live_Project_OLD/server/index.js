@@ -7,6 +7,9 @@ const pool = require("./db")
 app.use(cors());
 app.use(express.json());
 
+// Serve Images
+app.use(express.static('static'));
+
 //Routes
 
 //GetTop5Drivers
@@ -93,7 +96,8 @@ app.get("/winners", async(req, res) =>{
     }
 })
 
-// //Show Car Detail
+// Show Car Detail
 // app.get("/car", async(req, res) => {
 //     <CarCard />
 // })
+

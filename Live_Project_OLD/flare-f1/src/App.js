@@ -6,6 +6,7 @@ import React from 'react';
 import "./static/style.css"
 import TeamsContainer from './containers/TeamsContainer';
 import DriversContainer from './containers/DriversContainer'
+import CarCard from './components/CarCard';
 
 function App() {
 
