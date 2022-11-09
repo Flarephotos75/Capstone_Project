@@ -24,6 +24,7 @@ const CarCard = () => {
     <div className="grid-container">
       <img className="redbullGrid" src={"http://localhost:8080/images/car/RedBull.jpg"}/>
       <div className="aeroGrid" >
+        AERODYNAMICS
         <img  width="100%" 
               src={"http://localhost:8080/images/car/aero.png"} 
               usemap="#image-map"

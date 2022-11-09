@@ -51,6 +51,8 @@ function App() {
         </Routes>
       </Router>
       <footer>
+        <hr />
+        <p className="footer">FLARE-F1 Designed by Steven Todd</p>
       </footer>
     </main>
   );

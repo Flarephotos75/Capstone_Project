@@ -18,6 +18,7 @@ const HaloPopover = () => {
   return (
 
     <div className="wheelsGrid" >
+      WHEELS<br />
       <img  width="25%" 
           src={"http://localhost:8080/images/car/wheels.png"} 
           usemap="#image-map"
@@ -45,9 +46,8 @@ const HaloPopover = () => {
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <img width="25%" className="grid-item" src={"http://localhost:8080/images/car/wheels.png"}/>
-            <p>Aerodynamics play a fundamental role in the overall setup of a Formula One car. An air duct panel between the front wheel and the side panel, for instance, can add more speed than two or three extra horsepower. The teams invest as much as up to 20% of their total budget in understanding the aerodynamics of the car. </p>
-      </Popover>
+        <img width="25%" className="grid-item" src={"http://localhost:8080/images/car/tyres.png"}/>
+        <p>Formula One tyres play a significant role in the performance of a Formula One car. The tyres have undergone major changes throughout the history of Formula One with different manufacturers and specifications used in the sport.</p>      </Popover>
     </div>
     
   );

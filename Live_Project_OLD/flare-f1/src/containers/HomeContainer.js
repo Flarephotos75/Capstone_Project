@@ -43,12 +43,8 @@ const HomeContainer = () => {
 
 
   return (
+    
     <div>
-      {/* <section>
-        <h1 className='main-title'>WELCOME TO  FLARE-F1</h1>
-      </section> */}
-
-
       <div className='stacked-group'>
         <div className='stacked-list'>
           <h4 className='stacked-group-title'>Drivers Championship</h4>
@@ -70,7 +66,7 @@ const HomeContainer = () => {
             Full Teams List
           </Link>
         </div>
-
+        
 
         {/* <div className='stacked-list'>
           <h4 className='stacked-group-title'>Circuits</h4> */}

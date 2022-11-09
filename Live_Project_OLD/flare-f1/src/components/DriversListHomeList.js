@@ -7,7 +7,7 @@ const DriversListHomeList = ( {listOfDrivers} ) => {
     return (
       <>
         <li  className='dash-list-item' >
-        <img src={"http://localhost:8080" + driver.image_path} width="72" height="72"/>
+        <img src={"http://localhost:8080" + driver.image_path} width="83" height="83"/>
           <p > {driver.driver_name}</p>
         </li>
         <hr />
