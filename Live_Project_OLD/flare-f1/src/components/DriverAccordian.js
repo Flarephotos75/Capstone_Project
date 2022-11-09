@@ -21,13 +21,22 @@ export default function ControlledAccordions({driver}) {
           aria-controls="panel1bh-content"
           id="panel1bh-header">
           <Typography sx={{ width: '30%', flexShrink: 0 }}>
-          {driver.driver_name}
+          <p className='bold'>{driver.driver_name}</p>
           </Typography>
          
         </AccordionSummary>
         <AccordionDetails> 
-          <p>POSITION </p><Typography sx={{ color: 'text.secondary', width: '30%' }}>{driver.position}</Typography>
-          <p>POINTS</p><Typography sx={{ width: '15%', align: 'right' }}>{driver.points}</Typography>        
+          <table className='driver'>
+            <tbody>
+            <tr>
+              <th>POSITION</th>
+              <th>POINTS</th>
+            </tr>
+            <tr><td><Typography sx={{ color: 'text.secondary', width: '30%' }}>{driver.position}</Typography></td>
+            <td><Typography sx={{ width: '15%', align: 'left' }}>{driver.points}</Typography></td></tr>
+            </tbody>
+          </table>
+                 
         </AccordionDetails>
       </Accordion>
     </div>

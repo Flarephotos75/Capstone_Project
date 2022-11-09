@@ -7,6 +7,8 @@ import "./static/style.css"
 import TeamsContainer from './containers/TeamsContainer';
 import DriversContainer from './containers/DriversContainer'
 import CircuitContainer from './containers/CircuitContainer'
+import QualyContainer from './containers/QualyContainer';
+import CarCard from './components/CarCard';
 
 function App() {
 
@@ -29,10 +31,10 @@ function App() {
 
           {/* DRIVERS ROUTES */}
           <Route path='/drivers/' element={<DriversContainer/>} />
-          {/* <Route path='/drivers/:id/' element={<HomeCard />} /> */}
+          {/* <Route path='/drivers/:id/' element={<DriversContainer />} /> */}
 
           {/* CAR ROUTE */}
-          {/* <Route path='/car' element={<CarCard />} /> */}
+          <Route path='/car' element={<CarCard />} />
 
            {/* TEAMS ROUTES */}
            <Route path='/teams/' element={<TeamsContainer />} />
@@ -40,7 +42,11 @@ function App() {
 
            {/* CIRCUITS ROUTES */}
            <Route path='/circuits/' element={<CircuitContainer />} />
-          {/* <Route path='/circuit/:id/' element={<CircuitDetail />} /> */}
+            <Route path='/circuit/:id/' element={<CircuitContainer />} />
+
+            {/* QUALY ROUTES */}
+            <Route path='/qualy/' element={<QualyContainer />} />
+          
 
         </Routes>
       </Router>

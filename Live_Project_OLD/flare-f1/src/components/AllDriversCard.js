@@ -9,7 +9,7 @@ const AllDriversCard     = ( {drivers} ) => {
   const driverData = drivers.map((driver) => {
         return (<>
             <img src={"http://localhost:8080" + driver.image_path} width="144" height="144"/>
-            <li><Accordian key={driver.id} driver={driver}/></li>
+            <Accordian key={driver.id} driver={driver}/>
         </>
         )
     })

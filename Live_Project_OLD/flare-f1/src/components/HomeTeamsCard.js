@@ -8,6 +8,7 @@ console.log(listOfTeams)
         return (
             <>
                 <li className= 'dash-list-item' >
+                    <img className='smallteamlogo' src={"http://localhost:8080" + team.image_path} width="100" height="72"/>
                     <p>{ team.name } </p>
                 </li>
             <hr/>

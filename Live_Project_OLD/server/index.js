@@ -1,3 +1,4 @@
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -62,7 +63,7 @@ app.get("/teams", async(req, res) =>{
 app.get("/teams:id", async(req, res) =>{
     try {
         const team = await pool.query("SELECT * FROM teams WHERE team_id = $1", [id])
-        res.json(team.rows)
+        res.json(getAllTeams.rows)
     }
     catch (err) {
         console.log(err.message);
@@ -81,6 +82,17 @@ app.get("/circuits", async(req, res) =>{
 })
 
 //GetCircuitByID
+app.get("/circuits/:id", async(req, res) =>{
+    try {
+        const circuit = await pool.query("SELECT * FROM circuits WHERE circuit_id = $1", [_id])
+        res.json(GetAllCircuits.rows)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+})
+
+
 app.listen(8080, () => {
     console.log("Server has Started on port 8080");
 })
@@ -96,8 +108,18 @@ app.get("/winners", async(req, res) =>{
     }
 })
 
+// Get Qualy Details
+app.get("/qualy", async(req, res) =>{
+    try {
+        const getAllQualy = await pool.query("SELECT * FROM qualifying")
+        res.json(getAllQualy.rows)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+})
+
 // Show Car Detail
-// app.get("/car", async(req, res) => {
-//     <CarCard />
-// })
+app.get("/car", async(req, res) => {
+})
 

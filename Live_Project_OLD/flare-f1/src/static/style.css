@@ -89,6 +89,98 @@ body {
   font-family: 'Titillium';
 }
 
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+} 
+
+th,td,tr {
+  border: 1px solid black;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+table.drivers {
+  table-layout: auto;
+  padding: 3px;
+  margin: 5px;
+  width: 100%;  
+}
+
+table.teams {
+  table-layout: auto;
+  padding: 3px;
+  margin: 5px;
+  width: 100%;  
+}
+
+table.cicuits {
+  table-layout: auto;
+  padding: 3px;
+  margin: 5px;
+  width: 100%;  
+}
+
+.carDisplay{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.aeroGrid{
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 25%;
+  grid-area: aero;
+
+}
+.haloGrid{
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 25%;
+  grid-area: halo;
+}
+
+.redbullGrid{
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  grid-area: redbullGrid;
+}
+
+.wheelsGrid{
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  grid-area: wheels;
+}
+
+.grid-container{
+  display: grid;
+  width: 100%;
+  padding: 10px;
+  grid-template-areas: 
+  'redbullGrid aero'
+  'redbullGrid halo'
+  'redbullGrid wheels'
+}
+
+.grid-item {
+  width: 30%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -155,7 +247,6 @@ section {
   align-items: center;
 }
 
-
 .nonav{
     display: none;
 }
@@ -176,8 +267,8 @@ section {
     display: flex;
     text-decoration: underline;
     font-weight: bold;
-    width: 50%;
-    height: 50%;
+    width: 20%;
+    height: 20%;
     justify-content: center;
     align-items: center;
     padding: 0;
