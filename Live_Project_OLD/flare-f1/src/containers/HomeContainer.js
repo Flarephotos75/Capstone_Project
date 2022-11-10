@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import HomeCard from '../components/HomeCard'
 import DriverService from '../services/DriverService'
 import TeamsService from '../services/TeamsService'
-// import TracksService from '../services/TracksService'
 import React from 'react';
 import TeamsCard from '../components/HomeTeamsCard';
+import TwitterFeed from '../components/TwitterFeed'
 
 const HomeContainer = () => {
 
@@ -28,23 +28,13 @@ const HomeContainer = () => {
     })
   }, [])
 
-
-//   useEffect(() => {
-//     getAllTeams().then((allTeams) => {
-//       setTeamsList(allTeams)
-//     })
-//   }, [])
-
-//   useEffect(() => {
-//     getAllTracks().then((allCircuits) => {
-//         setCircuitsList(allCircuits)
-//     })
-//   }, [])
-
-
   return (
     
     <div>
+       <div>
+          <TwitterFeed />          
+        </div>
+
       <div className='stacked-group'>
         <div className='stacked-list'>
           <h4 className='stacked-group-title'>Drivers Championship</h4>
@@ -66,16 +56,6 @@ const HomeContainer = () => {
             Full Teams List
           </Link>
         </div>
-        
-
-        {/* <div className='stacked-list'>
-          <h4 className='stacked-group-title'>Circuits</h4> */}
-
-          {/* <CircuitList circuits={circuitsList} /> */}
-          {/* <Link to='/circuits' className='button primary dash'>
-            All Circuits
-          </Link>
-        </div> */}
       </div>
     </div>
   )

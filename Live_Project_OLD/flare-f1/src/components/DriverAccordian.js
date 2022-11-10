@@ -32,8 +32,10 @@ export default function ControlledAccordions({driver}) {
               <th>POSITION</th>
               <th>POINTS</th>
             </tr>
-            <tr><td><Typography sx={{ color: 'text.secondary', width: '30%' }}>{driver.position}</Typography></td>
-            <td><Typography sx={{ width: '15%', align: 'left' }}>{driver.points}</Typography></td></tr>
+              <tr>
+                <td><Typography sx={{ color: 'text.secondary', width: '30%' }}>{driver.position}</Typography></td>
+                <td><Typography sx={{ width: '15%', align: 'left' }}>{driver.points}</Typography></td>
+              </tr>
             </tbody>
           </table>
                  

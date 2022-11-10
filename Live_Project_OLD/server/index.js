@@ -18,6 +18,7 @@ app.get("/", async(req, res) =>{
     try {
         const getTop5Drivers = await pool.query("SELECT * FROM drivers WHERE position GROUP BY position ORDER BY position")
         res.json(getTop5Drivers.rows)
+        
     }
     catch (err) {
         console.log(err.message);
@@ -27,7 +28,7 @@ app.get("/", async(req, res) =>{
 //GetAllDrivers
 app.get("/drivers", async(req, res) =>{
     try {
-        const getAllDrivers = await pool.query("SELECT * FROM drivers")
+        const getAllDrivers = await pool.query("SELECT * FROM drivers ORDER BY position ASC")
         res.json(getAllDrivers.rows)
     }
     catch (err) {
@@ -51,7 +52,7 @@ app.get("/drivers/:id", async(req, res) =>{
 //GetAllTeams
 app.get("/teams", async(req, res) =>{
     try {
-        const getAllTeams = await pool.query("SELECT * FROM teams")
+        const getAllTeams = await pool.query("SELECT * FROM teams ORDER BY position ASC")
         res.json(getAllTeams.rows)
     }
     catch (err) {
@@ -108,11 +109,33 @@ app.get("/winners", async(req, res) =>{
     }
 })
 
+// Get Winner by Driver ID
+app.get("/winners/:id", async(req, res) =>{
+    try {
+        const GetAllWinners = await pool.query("SELECT * FROM winners")
+        res.json(GetAllWinners.rows)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+})
+
 // Get Qualy Details
 app.get("/qualy", async(req, res) =>{
     try {
         const getAllQualy = await pool.query("SELECT * FROM qualifying")
         res.json(getAllQualy.rows)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+})
+
+// Get Race Results Details
+app.get("/raceresults", async(req, res) =>{
+    try {
+        const getAllRaceResults = await pool.query("SELECT * FROM raceresults ORDER BY id ASC")
+        res.json(getAllRaceResults.rows)
     }
     catch (err) {
         console.log(err.message);

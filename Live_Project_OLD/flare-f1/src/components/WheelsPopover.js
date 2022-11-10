@@ -47,7 +47,7 @@ const HaloPopover = () => {
         disableRestoreFocus
       >
         <img width="25%" className="grid-item" src={"http://localhost:8080/images/car/tyres.png"}/>
-        <p>Formula One tyres play a significant role in the performance of a Formula One car. The tyres have undergone major changes throughout the history of Formula One with different manufacturers and specifications used in the sport.</p>      </Popover>
+        <p className="stacked-list">Formula One tyres play a significant role in the performance of a Formula One car. The tyres have undergone major changes throughout the history of Formula One with different manufacturers and specifications used in the sport.</p>      </Popover>
     </div>
     
   );

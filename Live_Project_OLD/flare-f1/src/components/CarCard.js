@@ -52,7 +52,7 @@ const CarCard = () => {
           disableRestoreFocus
           >
           <img className="grid-item" src={"http://localhost:8080/images/car/aero.png"} usemap="#image-map"/>
-              <p>Aerodynamics play a fundamental role in the overall setup of a Formula One car. An air duct panel between the front wheel and the side panel, for instance, can add more speed than two or three extra horsepower. The teams invest as much as up to 20% of their total budget in understanding the aerodynamics of the car. </p>
+              <p className="stacked-list">Aerodynamics play a fundamental role in the overall setup of a Formula One car. An air duct panel between the front wheel and the side panel, for instance, can add more speed than two or three extra horsepower. The teams invest as much as up to 20% of their total budget in understanding the aerodynamics of the car. </p>
         </Popover>
       </div>
       <HaloPopover />

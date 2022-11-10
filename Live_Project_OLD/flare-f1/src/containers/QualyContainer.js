@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import React from 'react';
-import AllTeamsCard from '../components/AllTeamsCard';
 import QualyService from '../services/QualyService';
+import QualyChart from '../components/QualyChart';
 
 const QualyContainer = () => {
 
@@ -19,7 +19,7 @@ const QualyContainer = () => {
       <div className='stacked-list'>
       <h4 className='stacked-group-title'>Qualification Information </h4>
       <ul role='list' className='dash-list'>
-      <AllTeamsCard key={qualyList._id} qualyItems={qualyList} />
+      <QualyChart key={qualyList._id} qualyItems={qualyList} />
       </ul>
     </div>
 </div>

@@ -12,9 +12,19 @@ const AllCircuitsCard = ({ listOfTracks }) => {
                         <th>Grand Prix Name</th>
                         <th>Track Name</th> 
                         <th>Track Type</th> 
+                        <th>Track Length</th> 
+                        <th>Track Direction</th> 
+
+                        
                         <tr><td>{track.name}</td>
                         <td> {track.track}</td>
-                        <td>{track.type}</td></tr>
+                        <td>{track.type}</td>
+                        <td>{track.length}</td>
+                        <td>{track.direction}</td>
+
+                        
+                        </tr>
+
                     </tbody>
                 </table>
                 <hr />

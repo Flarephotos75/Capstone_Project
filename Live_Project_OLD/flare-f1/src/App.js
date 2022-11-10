@@ -9,6 +9,7 @@ import DriversContainer from './containers/DriversContainer'
 import CircuitContainer from './containers/CircuitContainer'
 import QualyContainer from './containers/QualyContainer';
 import CarCard from './components/CarCard';
+import RaceResultsContainer from './containers/RaceResultsContainer';
 
 function App() {
 
@@ -46,6 +47,9 @@ function App() {
 
             {/* QUALY ROUTES */}
             <Route path='/qualy/' element={<QualyContainer />} />
+
+            {/* RACE RESULTS ROUTES */}
+            <Route path='/raceresults/' element={<RaceResultsContainer />} />
           
 
         </Routes>

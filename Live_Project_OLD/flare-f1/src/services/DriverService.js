@@ -1,14 +1,6 @@
-// import React from 'react';
-// import queryDrivers from '../server/DB';
-
-
-// // const driversURL = "https://f1.sportmonks.com/api/v1.0/drivers/season/7?api_token=lFI3NTv1Il1180T1qLxoLkbApazvo9q6S0NLOU3UXz1nYwiidWFUgsc5Ull0"
-
 const driversURL = "http://localhost:8080/drivers"
 
 const DriverService = {
-
-
 
 getAllDrivers  () {
     return fetch(driversURL)
@@ -20,12 +12,6 @@ getDriver(id) {
     return fetch(driversURL + id)
     .then((res) => res.json())
   },
-
-
-
 }
-
-
-
 
 export default DriverService;

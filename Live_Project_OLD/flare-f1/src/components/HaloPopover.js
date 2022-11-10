@@ -49,7 +49,7 @@ const HaloPopover = () => {
       >
         <img width="20%" className="grid-item" src={"http://localhost:8080/images/car/romain.png"}/>
         <img width="20%" className="grid-item" src={"http://localhost:8080/images/car/halo2.png"}/>
-        <p>The Halo is a protective barrier that helps to prevent large objects and debris from entering the cockpit of a single-seat racing car.  This saved the life of 
+        <p className="stacked-list">The Halo is a protective barrier that helps to prevent large objects and debris from entering the cockpit of a single-seat racing car.  This saved the life of 
 Romain Grosjean in 2020 after a horrific crash in Bahrain</p>      
         </Popover>
     </div>
