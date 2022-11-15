@@ -1,0 +1,11 @@
+id,name,image_path,team_id,season_id,points,position
+15,Red Bull,https://cdn.sportmonks.com/images/f1/teams/redbull.png,15,7,696,1
+11,Ferrari,https://cdn.sportmonks.com/images/f1/teams/ferrari.png,11,7,487,2
+13,Mercedes,https://cdn.sportmonks.com/images/f1/teams/mercedes.png,13,7,447,3
+16,Alpine,https://cdn.sportmonks.com/images/f1/teams/alpine.png,16,7,153,4
+14,McLaren,https://cdn.sportmonks.com/images/f1/teams/mcclaren.png,14,7,146,5
+19,Alfa Romeo,https://cdn.sportmonks.com/images/f1/teams/alfaromeo.png,19,7,52,6
+20,Aston Martin,https://cdn.sportmonks.com/images/f1/teams/astonmartin.png,20,7,37,7
+18,Haas,https://cdn.sportmonks.com/images/f1/teams/haas.png,18,7,34,8
+17,AlphaTauri,https://cdn.sportmonks.com/images/f1/teams/alphatauri.png,17,7,34,9
+57,Williams,https://cdn.sportmonks.com/images/f1/teams/williams.png,57,7,6,10
